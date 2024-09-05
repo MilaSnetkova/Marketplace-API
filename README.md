@@ -1,7 +1,5 @@
 # Marketplace-API
 
-## Основная идея
-
 Минимальная версия маркетплейс back-end сервиса, где есть 2 основных актора
 
 - Магазин который продает свою продукцию
@@ -51,6 +49,12 @@
 - address
 - phone
 
+**Categories**
+
+- id
+- uuid
+- name
+
 **Store Items**
 
 - id
@@ -58,6 +62,7 @@
 - name
 - description
 - price
+- category_id
 - created_at
 - updated_at
 
@@ -76,3 +81,22 @@
 - customer_id
 - created_at
 - updated_at
+
+**Orders**
+
+- id
+- uuid
+- user_id
+- store_id
+- order_date
+- shipped_date
+- ship_pickuppoint_id
+- created_at
+- updated_at
+
+**OrderDetails**
+
+- id
+- order_id int
+- item_id int
+- quantity smallint
